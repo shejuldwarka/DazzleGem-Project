@@ -1,0 +1,81 @@
+<div class="sidebar">
+    <!-- About Author Widget -->
+    <!-- Search Widget -->
+    <div class="widget search-widget mb-40">
+        <h5 class="widget-title">Search Objects</h5>
+        <form action="#">
+            <input type="text" placeholder="Search your keyword...">
+            <button type="submit"><i class="far fa-search"></i></button>
+        </form>
+    </div>
+    <!-- Popular Post Widget -->
+    <div class="widget popular-feeds mb-40">
+        <h5 class="widget-title">Popular Products</h5>
+        <div class="popular-feed-loop">
+            <div class="single-popular-feed" *ngFor="let popularproduct of popularproducts">
+                <div class="feed-img">
+                    <img src="{{popularproduct.img}}" alt="Image">
+                </div>
+                <div class="feed-desc desc">
+                    <h6><a routerLink='/shop-detail'>{{popularproduct.title}}</a></h6>
+                    <span class="price">${{popularproduct.price}} <span>${{popularproduct.discountprice}}</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Cart Widget -->
+    <div class="widget popular-feeds mb-40">
+        <h5 class="widget-title">Cart</h5>
+        <div class="popular-feed-loop">
+            <div class="single-popular-feed" *ngFor="let cartproduct of cartproducts">
+                <div class="feed-img">
+                    <img src="{{cartproduct.img}}" alt="Image">
+                </div>
+                <div class="feed-desc desc">
+                    <div class="cart-flex">
+                        <h6><a href="#">{{cartproduct.title}}</a></h6>
+                        <a href="#" class="remove"><i class="fal fa-times"></i></a>
+                    </div>
+                    <span class="price">${{cartproduct.price}} <span>${{cartproduct.discountprice}}</span></span>
+                </div>
+            </div>
+            <div class="widget-cart-info">
+                <div class="cart-details">
+                    <span>Subtotal:</span>
+                    <span>$51.00</span>
+                </div>
+                <div class="cart-buttons">
+                    <a routerLink='/cart' class="main-btn btn-filled">View Cart</a>
+                    <a routerLink='/checkout' class="main-btn btn-filled">Checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Color Widget -->
+    <div class="widget socail-widget mb-40">
+        <h5 class="widget-title">Color</h5>
+        <div class="filter-color">
+            <form>
+                <label class="checkbox" *ngFor="let colorpost of colorposts">
+                    <input type="checkbox" name="#">
+                    <span class="custom-box"></span>
+                    {{colorpost.name}}
+                </label>
+            </form>
+        </div>
+    </div>
+    <!-- Instagram Feeds Widget -->
+    <div class="widget instagram-feed-widget mb-40">
+        <h5 class="widget-title">Instagram Feeds</h5>
+        <ul>
+            <li *ngFor="let instafeed of instafeeds"><img src="{{instafeed.img}}" alt="Image"></li>
+        </ul>
+    </div>
+    <!-- Popular Tags Widget -->
+    <div class="widget popular-tag-widget">
+        <h5 class="widget-title">Popular Tags</h5>
+        <ul>
+            <li *ngFor="let tag of tags"><a href="#">{{tag.title}}</a></li>
+        </ul>
+    </div>
+</div>

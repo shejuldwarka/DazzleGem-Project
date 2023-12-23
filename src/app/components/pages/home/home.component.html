@@ -1,0 +1,657 @@
+<app-header></app-header>
+<app-newsletter></app-newsletter>
+<!--====== BANNER PART START ======-->
+<section class="banner-area banner-style-one position-relative">
+    <!-- Follow Circle -->
+    <app-cursor></app-cursor>
+    <div class="d-none d-md-block vertical-text wow fadeIn" data-wow-delay=".3s">
+        <ul>
+            <li>
+                <a href="#"> <i class="fab fa-facebook"></i> Facebook </a>
+            </li>
+            <li>
+                <a href="#"> <i class="fab fa-instagram"></i> Instagram </a>
+            </li>
+            <li>
+                <a href="#"> <i class="fab fa-twitter"></i> Twitter </a>
+            </li>
+        </ul>
+    </div>
+    <div class="d-none d-md-block vertical-text right wow fadeIn" data-wow-delay=".3s">
+        <span>Call us on: </span>
+        <span>+123 456 789</span>
+    </div>
+    <div class="container container-custom-two">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6">
+                <div class="banner-content">
+                    <span class="promo-tag wow fadeInDown" data-wow-delay=".3s">Jewelry Design With Love</span>
+                    <h1 class="title wow fadeInLeft" data-wow-delay=".5s">High-End <br>Jewelry Items</h1>
+                    <ul>
+                        <li>
+                            <a class="main-btn btn-filled wow fadeInUp" data-wow-delay=".7s" routerLink='/about'>Buy Now </a>
+                        </li>
+                        <li>
+                            <a class="main-btn btn-border wow fadeInUp" data-wow-delay=".9s" routerLink='/about'>Explore Now</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 wow fadeInRight" data-wow-delay="0.5s">
+                <div class="banner-thumb d-none d-md-block">
+                    <ngx-slick-carousel class="carousel hero-slider-one" #slickModal="slick-carousel" [config]="herosliderConfig">
+                        <div ngxSlickItem class="single-thumb" *ngFor="let bannerpost of bannerposts">
+                            <img src="{{bannerpost.img}}" alt="images">
+                        </div>
+                    </ngx-slick-carousel>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--====== BANNER PART ENDS ======-->
+<!--====== Category START ======-->
+<div class="categories-box-layout">
+    <div class="container">
+        <div class="categories-box-layout-inner">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6" *ngFor="let categorypost of categoryposts">
+                    <a routerLink='/shop-left' class="categories-box">
+                        <span class="icon">
+                            <i class="{{categorypost.icon}}"></i>
+                        </span>
+                        <h5 class="title">{{categorypost.title}}</h5>
+                        <p>{{categorypost.numberofproduct}} Products</p>
+                        <span class="overlay-icon">
+                            <i class="{{categorypost.icon}}"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--====== Category EN ======-->
+<!--====== ABOUT PART START ======-->
+<app-habout></app-habout>
+<!--====== ABOUT PART END ======-->
+<!--====== Our Jewelries START ======-->
+<section class="pt-115 pb-115 bg-white">
+    <div class="container">
+        <div class="section-title text-center mb-30">
+            <div class="section-title-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="45" height="45" x="0" y="0" viewBox="0 0 512 512" xml:space="preserve" class="">
+                    <path d="M369.853,250.251l-100-241C267.53,3.65,262.062,0,255.999,0s-11.531,3.65-13.854,9.251l-100,241    c-1.527,3.681-1.527,7.817,0,11.498l100,241c2.323,5.601,7.791,9.251,13.854,9.251s11.531-3.65,13.854-9.251l100-241    C371.381,258.068,371.381,253.932,369.853,250.251z M255.999,457.861L172.239,256l83.76-201.861L339.759,256L255.999,457.861z" fill="#ffffff" />
+                    <path class="diamond-spark spark-1" d="M139.606,118.393l-63-63c-5.858-5.857-15.356-5.857-21.213,0c-5.858,5.858-5.858,15.356,0,21.213l63,63    c2.928,2.929,6.767,4.394,10.606,4.394s7.678-1.465,10.607-4.394C145.465,133.748,145.465,124.25,139.606,118.393z" fill="#ffffff" />
+                    <path class="diamond-spark spark-2" d="M456.607,55.393c-5.858-5.857-15.356-5.857-21.213,0l-63,63c-5.858,5.858-5.858,15.356,0,21.213    c2.928,2.929,6.767,4.394,10.606,4.394s7.678-1.465,10.607-4.394l63-63C462.465,70.748,462.465,61.25,456.607,55.393z" fill="#ffffff" />
+                    <path class="diamond-spark spark-3" d="M139.606,372.393c-5.858-5.857-15.356-5.857-21.213,0l-63,63c-5.858,5.858-5.858,15.356,0,21.213    C58.322,459.535,62.16,461,65.999,461s7.678-1.465,10.607-4.394l63-63C145.465,387.748,145.465,378.25,139.606,372.393z" fill="#ffffff" />
+                    <path class="diamond-spark spark-4" d="M456.607,435.393l-63-63c-5.858-5.857-15.356-5.857-21.213,0c-5.858,5.858-5.858,15.356,0,21.213l63,63    c2.928,2.929,6.767,4.394,10.606,4.394s7.678-1.465,10.607-4.394C462.465,450.748,462.465,441.25,456.607,435.393z" fill="#ffffff" />
+                </svg>
+            </div>
+            <span class="title-tag"> avail our offer </span>
+            <h2>Trending Collection</h2>
+        </div>
+        <div class="text-center mb-20">
+            <a href="#">View more
+                <i class="fal fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6" *ngFor="let trendingpost of trendingposts">
+                <div class="apartment-box">
+                    <div class="image-box">
+                        <a routerLink='/shop-detail' class="d-block">
+                            <img src="{{trendingpost.img}}" alt="img">
+                        </a>
+                    </div>
+                    <div class="content-box-2">
+                        <h3 class="title">
+                            <a routerLink='/shop-detail'>{{trendingpost.title}}</a>
+                        </h3>
+                        <p>{{trendingpost.text}}</p>
+                        <span class="price">{{trendingpost.price}} </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--====== Our Jewelries End ======-->
+<!--====== Condos Overlay START ======-->
+<section class="condos-overlay-sec">
+    <div class="container-fluid p-0">
+        <div class="row no-gutters">
+            <div class="col-lg-3 col-md-6" *ngFor="let condospost of condosposts">
+                <div class="condo-item" style="background-image: url({{condospost.img}});">
+                    <div class="title">
+                        <i class="fal fa-plus text-white"></i>
+                        <h4 class="text-white">{{condospost.title}}</h4>
+                    </div>
+                    <div class="title title-hidden">
+                        <h4 class="text-white mt-0">{{condospost.title}}</h4>
+                        <p class="text-white">{{condospost.text}}</p>
+                        <div class="book-btn">
+                            <a routerLink='/shop-detail'><i class="fal fa-long-arrow-right"></i>Buy now</a>
+                        </div>
+                    </div>
+                    <a routerLink='/shop-detail' class="main-btn btn-border">Starting at {{condospost.price}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--====== Condos Overlay END ======-->
+<!--====== CORE FEATURES START ======-->
+<section class="pt-115 pb-115 bg-white cta-sec" style="background-image: url('{{ctabg}}');">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="block-text">
+                    <div class="section-title mb-20">
+                        <span class="title-tag">Buy Now</span>
+                        <h2>Rare Collections.</h2>
+                    </div>
+                    <p class="pr-50">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, aliquip ex ea commodo consequat you have to understand this.
+                    </p>
+                    <a routerLink='/shop-left' class="main-btn btn-filled mt-40">Shop now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--====== CORE FEATURES END ======-->
+<section class="pt-115 pb-115 container-wide restaurant-tab-area position-relative">
+    <img src="{{texture}}" alt="texture" class="texture-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="block-text">
+                    <div class="section-title mb-20">
+                        <span class="title-tag">Buy Now</span>
+                        <h2>Bestselling Products </h2>
+                    </div>
+                    <p class="pr-50">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, aliquip ex ea commodo consequat you have to understand this.
+                    </p>
+                    <a routerLink='/shop-left' class="main-btn btn-filled mt-40">Shop now</a>
+                </div>
+            </div>
+            <div class="px-2 w-100">
+                <ngx-slick-carousel class="row wide-shop-post-slider mt-80" #slickModal="slick-carousel" [config]="widesliderConfig">
+
+                    <div ngxSlickItem class="col-12" *ngFor="let shoppost of shopposts">
+                        <div class="food-box shop-box">
+                            <div class="thumb">
+                                <img src="{{shoppost.img}}" alt="images">
+                                <div class="badges">
+                                    <span class="price" *ngIf="shoppost.tag1">{{shoppost.tag1}}</span>
+                                    <span class="price discounted" *ngIf="shoppost.tag2">{{shoppost.tag2}}</span>
+                                </div>
+                                <div class="button-group">
+                                    <a href="#"><i class="far fa-heart"></i></a>
+                                    <a href="#"><i class="far fa-sync-alt"></i></a>
+                                    <a href="#" data-toggle="modal" data-target="#quickViewModal"><i class="far fa-eye"></i></a>
+                                </div>
+                            </div>
+                            <div class="desc">
+                                <h4>
+                                    <a routerLink='/shop-detail'>{{shoppost.title}}</a>
+                                </h4>
+                                <span class="price">{{shoppost.price1}} <span *ngIf="shoppost.price2">{{shoppost.price2}}</span></span>
+                                <a routerLink='/shop-detail' class="link"><i class="fal fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </ngx-slick-carousel>
+            </div>
+        </div>
+    </div>
+</section>
+<!--====== SHOP PART START ======-->
+<section class="restaurant-tab-area pb-90">
+    <div class="container">
+        <div class="section-title mb-50">
+            <span class="title-tag"> Categories </span>
+            <h2>Our Categories</h2>
+        </div>
+        <ul ngbNav #nav="ngbNav" class="restaurant-rood-list row justify-content-center nav nav-pills mb-30" id="restaurant-tab" role="tablist">
+            <li ngbNavItem class="nav-item col-lg-2 col-md-3 col-sm-4 col-6">
+                <a ngbNavLink>
+                    <i class="flaticon-ring"></i>
+                    <span class="title">Rings</span>
+                </a>
+                <ng-template ngbNavContent>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6" *ngFor="let ringspost of ringsposts">
+                            <div class="food-box shop-box">
+                                <div class="thumb">
+                                    <img src="{{ringspost.img}}" alt="images">
+                                    <div class="badges">
+                                        <span class="price" *ngIf="ringspost.tag1">{{ringspost.tag1}}</span>
+                                        <span class="price discounted" *ngIf="ringspost.tag2">{{ringspost.tag2}}</span>
+                                    </div>
+                                    <div class="button-group">
+                                        <a href="#"><i class="far fa-heart"></i></a>
+                                        <a href="#"><i class="far fa-sync-alt"></i></a>
+                                        <a href="#" data-toggle="modal" data-target="#quickViewModal"><i class="far fa-eye"></i></a>
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                    <h4>
+                                        <a routerLink='/shop-detail'>{{ringspost.title}}</a>
+                                    </h4>
+                                    <span class="price">{{ringspost.price1}} <span *ngIf="ringspost.price2">{{ringspost.price2}}</span></span>
+                                    <a routerLink='/shop-detail' class="link"><i class="fal fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </li>
+            <li ngbNavItem class="nav-item col-lg-2 col-md-3 col-sm-4 col-6">
+                <a ngbNavLink>
+                    <i class="flaticon-earrings"></i>
+                    <span class="title">Earrings</span>
+                </a>
+                <ng-template ngbNavContent>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6" *ngFor="let earingpost of earingposts">
+                            <div class="food-box shop-box">
+                                <div class="thumb">
+                                    <img src="{{earingpost.img}}" alt="images">
+                                    <div class="badges">
+                                        <span class="price" *ngIf="earingpost.tag1">{{earingpost.tag1}}</span>
+                                        <span class="price discounted" *ngIf="earingpost.tag2">{{earingpost.tag2}}</span>
+                                    </div>
+                                    <div class="button-group">
+                                        <a href="#"><i class="far fa-heart"></i></a>
+                                        <a href="#"><i class="far fa-sync-alt"></i></a>
+                                        <a href="#" data-toggle="modal" data-target="#quickViewModal"><i class="far fa-eye"></i></a>
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                    <h4>
+                                        <a routerLink='/shop-detail'>{{earingpost.title}}</a>
+                                    </h4>
+                                    <span class="price">{{earingpost.price1}} <span *ngIf="earingpost.price2">{{earingpost.price2}}</span></span>
+                                    <a routerLink='/shop-detail' class="link"><i class="fal fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </li>
+            <li ngbNavItem class="nav-item col-lg-2 col-md-3 col-sm-4 col-6">
+                <a ngbNavLink>
+                    <i class="flaticon-necklace"></i>
+                    <span class="title">Necklaces</span>
+                </a>
+                <ng-template ngbNavContent>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6" *ngFor="let necklesspost of necklessposts">
+                            <div class="food-box shop-box">
+                                <div class="thumb">
+                                    <img src="{{necklesspost.img}}" alt="images">
+                                    <div class="badges">
+                                        <span class="price" *ngIf="necklesspost.tag1">{{necklesspost.tag1}}</span>
+                                        <span class="price discounted" *ngIf="necklesspost.tag2">{{necklesspost.tag2}}</span>
+                                    </div>
+                                    <div class="button-group">
+                                        <a href="#"><i class="far fa-heart"></i></a>
+                                        <a href="#"><i class="far fa-sync-alt"></i></a>
+                                        <a href="#" data-toggle="modal" data-target="#quickViewModal"><i class="far fa-eye"></i></a>
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                    <h4>
+                                        <a routerLink='/shop-detail'>{{necklesspost.title}}</a>
+                                    </h4>
+                                    <span class="price">{{necklesspost.price1}} <span *ngIf="necklesspost.price2">{{necklesspost.price2}}</span></span>
+                                    <a routerLink='/shop-detail' class="link"><i class="fal fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </li>
+            <li ngbNavItem class="nav-item col-lg-2 col-md-3 col-sm-4 col-6">
+                <a ngbNavLink>
+                    <i class="flaticon-bracelet-2"></i>
+                    <span class="title">Bracelets</span>
+                </a>
+                <ng-template ngbNavContent>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6" *ngFor="let braceletpost of braceletposts">
+                            <div class="food-box shop-box">
+                                <div class="thumb">
+                                    <img src="{{braceletpost.img}}" alt="images">
+                                    <div class="badges">
+                                        <span class="price" *ngIf="braceletpost.tag1">{{braceletpost.tag1}}</span>
+                                        <span class="price discounted" *ngIf="braceletpost.tag2">{{braceletpost.tag2}}</span>
+                                    </div>
+                                    <div class="button-group">
+                                        <a href="#"><i class="far fa-heart"></i></a>
+                                        <a href="#"><i class="far fa-sync-alt"></i></a>
+                                        <a href="#" data-toggle="modal" data-target="#quickViewModal"><i class="far fa-eye"></i></a>
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                    <h4>
+                                        <a routerLink='/shop-detail'>{{braceletpost.title}}</a>
+                                    </h4>
+                                    <span class="price">{{braceletpost.price1}} <span *ngIf="braceletpost.price2">{{braceletpost.price2}}</span></span>
+                                    <a routerLink='/shop-detail' class="link"><i class="fal fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </li>
+            <li ngbNavItem class="nav-item col-lg-2 col-md-3 col-sm-4 col-6">
+                <a ngbNavLink>
+                    <i class="flaticon-bracelet"></i>
+                    <span class="title">Armlets</span>
+                </a>
+                <ng-template ngbNavContent>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6" *ngFor="let armletspost of armletsposts">
+                            <div class="food-box shop-box">
+                                <div class="thumb">
+                                    <img src="{{armletspost.img}}" alt="images">
+                                    <div class="badges">
+                                        <span class="price" *ngIf="armletspost.tag1">{{armletspost.tag1}}</span>
+                                        <span class="price discounted" *ngIf="armletspost.tag2">{{armletspost.tag2}}</span>
+                                    </div>
+                                    <div class="button-group">
+                                        <a href="#"><i class="far fa-heart"></i></a>
+                                        <a href="#"><i class="far fa-sync-alt"></i></a>
+                                        <a href="#" data-toggle="modal" data-target="#quickViewModal"><i class="far fa-eye"></i></a>
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                    <h4>
+                                        <a routerLink='/shop-detail'>{{armletspost.title}}</a>
+                                    </h4>
+                                    <span class="price">{{armletspost.price1}} <span *ngIf="armletspost.price2">{{armletspost.price2}}</span></span>
+                                    <a routerLink='/shop-detail' class="link"><i class="fal fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </li>
+            <li ngbNavItem class="nav-item col-lg-2 col-md-3 col-sm-4 col-6">
+                <a ngbNavLink>
+                    <i class="flaticon-bracelet-1"></i>
+                    <span class="title">Anklets</span>
+                </a>
+                <ng-template ngbNavContent>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6" *ngFor="let ankletspost of ankletsposts">
+                            <div class="food-box shop-box">
+                                <div class="thumb">
+                                    <img src="{{ankletspost.img}}" alt="images">
+                                    <div class="badges">
+                                        <span class="price" *ngIf="ankletspost.tag1">{{ankletspost.tag1}}</span>
+                                        <span class="price discounted" *ngIf="ankletspost.tag2">{{ankletspost.tag2}}</span>
+                                    </div>
+                                    <div class="button-group">
+                                        <a href="#"><i class="far fa-heart"></i></a>
+                                        <a href="#"><i class="far fa-sync-alt"></i></a>
+                                        <a href="#" data-toggle="modal" data-target="#quickViewModal"><i class="far fa-eye"></i></a>
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                    <h4>
+                                        <a routerLink='/shop-detail'>{{ankletspost.title}}</a>
+                                    </h4>
+                                    <span class="price">{{ankletspost.price1}} <span *ngIf="ankletspost.price2">{{ankletspost.price2}}</span></span>
+                                    <a routerLink='/shop-detail' class="link"><i class="fal fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </li>
+        </ul>
+        <!-- tab content -->
+        <div class="tab-content " id="restaurant-tabContent">
+            <div [ngbNavOutlet]="nav"></div>
+        </div>
+    </div>
+</section>
+<!--====== SHOP PART END ======-->
+<!--====== SERVICE PART START ======-->
+<section class="service-sec bg-black pt-115 pb-85">
+    <div class="container">
+        <div class="section-title text-center mb-50">
+            <div class="section-title-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="45" height="45" x="0" y="0" viewBox="0 0 512 512" xml:space="preserve" class="">
+                    <path d="M369.853,250.251l-100-241C267.53,3.65,262.062,0,255.999,0s-11.531,3.65-13.854,9.251l-100,241    c-1.527,3.681-1.527,7.817,0,11.498l100,241c2.323,5.601,7.791,9.251,13.854,9.251s11.531-3.65,13.854-9.251l100-241    C371.381,258.068,371.381,253.932,369.853,250.251z M255.999,457.861L172.239,256l83.76-201.861L339.759,256L255.999,457.861z" fill="#ffffff" />
+                    <path class="diamond-spark spark-1" d="M139.606,118.393l-63-63c-5.858-5.857-15.356-5.857-21.213,0c-5.858,5.858-5.858,15.356,0,21.213l63,63    c2.928,2.929,6.767,4.394,10.606,4.394s7.678-1.465,10.607-4.394C145.465,133.748,145.465,124.25,139.606,118.393z" fill="#ffffff" />
+                    <path class="diamond-spark spark-2" d="M456.607,55.393c-5.858-5.857-15.356-5.857-21.213,0l-63,63c-5.858,5.858-5.858,15.356,0,21.213    c2.928,2.929,6.767,4.394,10.606,4.394s7.678-1.465,10.607-4.394l63-63C462.465,70.748,462.465,61.25,456.607,55.393z" fill="#ffffff" />
+                    <path class="diamond-spark spark-3" d="M139.606,372.393c-5.858-5.857-15.356-5.857-21.213,0l-63,63c-5.858,5.858-5.858,15.356,0,21.213    C58.322,459.535,62.16,461,65.999,461s7.678-1.465,10.607-4.394l63-63C145.465,387.748,145.465,378.25,139.606,372.393z" fill="#ffffff" />
+                    <path class="diamond-spark spark-4" d="M456.607,435.393l-63-63c-5.858-5.857-15.356-5.857-21.213,0c-5.858,5.858-5.858,15.356,0,21.213l63,63    c2.928,2.929,6.767,4.394,10.606,4.394s7.678-1.465,10.607-4.394C462.465,450.748,462.465,441.25,456.607,435.393z" fill="#ffffff" />
+                </svg>
+            </div>
+            <span class="title-tag"> New Collection </span>
+            <h2>Handpicked Products</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6" *ngFor="let servicepost of serviceposts">
+                <div class="service-wrapper mb-30">
+                    <div class="image-box">
+                        <a href="#">
+                            <img src="{{servicepost.img}}" alt="img">
+                        </a>
+                    </div>
+                    <div class="service-content text-center">
+                        <div class="icon">
+                            <i class="{{servicepost.icon}}"></i>
+                        </div>
+                        <h3>
+                            <a href="#">{{servicepost.title}}</a>
+                        </h3>
+                        <p>{{servicepost.text}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--====== SERVICE PART END ======-->
+<!--====== SHOP SECTION START ======-->
+<app-ourproducts></app-ourproducts>
+
+<!--====== SHOP SECTION END ======-->
+<!--====== SHOP SECTION STYLE 2 START ======-->
+<section class="restaurant-tab-area bg-white pt-115 pb-85">
+    <div class="container">
+        <div class="section-title text-center mb-50">
+            <div class="section-title-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="45" height="45" x="0" y="0" viewBox="0 0 512 512" xml:space="preserve" class="">
+                    <path d="M369.853,250.251l-100-241C267.53,3.65,262.062,0,255.999,0s-11.531,3.65-13.854,9.251l-100,241    c-1.527,3.681-1.527,7.817,0,11.498l100,241c2.323,5.601,7.791,9.251,13.854,9.251s11.531-3.65,13.854-9.251l100-241    C371.381,258.068,371.381,253.932,369.853,250.251z M255.999,457.861L172.239,256l83.76-201.861L339.759,256L255.999,457.861z" fill="#ffffff" />
+                    <path class="diamond-spark spark-1" d="M139.606,118.393l-63-63c-5.858-5.857-15.356-5.857-21.213,0c-5.858,5.858-5.858,15.356,0,21.213l63,63    c2.928,2.929,6.767,4.394,10.606,4.394s7.678-1.465,10.607-4.394C145.465,133.748,145.465,124.25,139.606,118.393z" fill="#ffffff" />
+                    <path class="diamond-spark spark-2" d="M456.607,55.393c-5.858-5.857-15.356-5.857-21.213,0l-63,63c-5.858,5.858-5.858,15.356,0,21.213    c2.928,2.929,6.767,4.394,10.606,4.394s7.678-1.465,10.607-4.394l63-63C462.465,70.748,462.465,61.25,456.607,55.393z" fill="#ffffff" />
+                    <path class="diamond-spark spark-3" d="M139.606,372.393c-5.858-5.857-15.356-5.857-21.213,0l-63,63c-5.858,5.858-5.858,15.356,0,21.213    C58.322,459.535,62.16,461,65.999,461s7.678-1.465,10.607-4.394l63-63C145.465,387.748,145.465,378.25,139.606,372.393z" fill="#ffffff" />
+                    <path class="diamond-spark spark-4" d="M456.607,435.393l-63-63c-5.858-5.857-15.356-5.857-21.213,0c-5.858,5.858-5.858,15.356,0,21.213l63,63    c2.928,2.929,6.767,4.394,10.606,4.394s7.678-1.465,10.607-4.394C462.465,450.748,462.465,441.25,456.607,435.393z" fill="#ffffff" />
+                </svg>
+            </div>
+            <span class="title-tag"> Latest </span>
+            <h2>On Sale Products</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-6" *ngFor="let latestpost of latestposts">
+                <div class="food-box shop-box shop-box-2">
+                    <div class="thumb">
+                        <img src="{{latestpost.img}}" alt="images">
+                        <div class="button-group">
+                            <a href="#"><i class="far fa-heart"></i></a>
+                            <a href="#"><i class="far fa-sync-alt"></i></a>
+                            <a href="#" data-toggle="modal" data-target="#quickViewModal"><i class="far fa-eye"></i></a>
+                        </div>
+                        <div class="cart-block">
+                            <a href="#">Add to Cart</a>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <h4 class="mb-0">
+                            <a routerLink='/shop-detail'>{{latestpost.title}}</a>
+                        </h4>
+                        <span class="price">{{latestpost.price}}</span>
+                        <a routerLink='/shop-detail' class="link"><i class="fal fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--====== SHOP SECTION STYLE 2 END ======-->
+<!--====== COUNTER UP START ======-->
+<section class="counter-section">
+    <div class="container">
+        <div class="counter-inner pt-100 pb-60">
+            <div class="row justify-content-center">
+                <div class="col-xl-10 col-11">
+                    <div class="row">
+                        <div class="col-lg-3 col-6" *ngFor="let counter of counterposts">
+                            <div class="counter-box box-layout d-flex justify-content-center justify-content-lg-start">
+                                <div>
+                                    <div class="icon">
+                                        <i class="{{counter.icon}}"></i>
+                                    </div>
+                                    <h4><span class="counter">{{counter.number}}</span>{{counter.prefix}}<span class="plus-icon">+</span></h4>
+                                    <span class="title">{{counter.title}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="pt-115 pb-115 bg-white room-type-section style-2">
+    <div class="container">
+        <div class="section-title text-center mb-50">
+            <div class="section-title-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="45" height="45" x="0" y="0" viewBox="0 0 512 512" xml:space="preserve" class="">
+                    <path d="M369.853,250.251l-100-241C267.53,3.65,262.062,0,255.999,0s-11.531,3.65-13.854,9.251l-100,241    c-1.527,3.681-1.527,7.817,0,11.498l100,241c2.323,5.601,7.791,9.251,13.854,9.251s11.531-3.65,13.854-9.251l100-241    C371.381,258.068,371.381,253.932,369.853,250.251z M255.999,457.861L172.239,256l83.76-201.861L339.759,256L255.999,457.861z" fill="#ffffff" />
+                    <path class="diamond-spark spark-1" d="M139.606,118.393l-63-63c-5.858-5.857-15.356-5.857-21.213,0c-5.858,5.858-5.858,15.356,0,21.213l63,63    c2.928,2.929,6.767,4.394,10.606,4.394s7.678-1.465,10.607-4.394C145.465,133.748,145.465,124.25,139.606,118.393z" fill="#ffffff" />
+                    <path class="diamond-spark spark-2" d="M456.607,55.393c-5.858-5.857-15.356-5.857-21.213,0l-63,63c-5.858,5.858-5.858,15.356,0,21.213    c2.928,2.929,6.767,4.394,10.606,4.394s7.678-1.465,10.607-4.394l63-63C462.465,70.748,462.465,61.25,456.607,55.393z" fill="#ffffff" />
+                    <path class="diamond-spark spark-3" d="M139.606,372.393c-5.858-5.857-15.356-5.857-21.213,0l-63,63c-5.858,5.858-5.858,15.356,0,21.213    C58.322,459.535,62.16,461,65.999,461s7.678-1.465,10.607-4.394l63-63C145.465,387.748,145.465,378.25,139.606,372.393z" fill="#ffffff" />
+                    <path class="diamond-spark spark-4" d="M456.607,435.393l-63-63c-5.858-5.857-15.356-5.857-21.213,0c-5.858,5.858-5.858,15.356,0,21.213l63,63    c2.928,2.929,6.767,4.394,10.606,4.394s7.678-1.465,10.607-4.394C462.465,450.748,462.465,441.25,456.607,435.393z" fill="#ffffff" />
+                </svg>
+            </div>
+            <span class="title-tag"> May Be You Have Earned It </span>
+            <h2>On Sale Products</h2>
+        </div>
+        <div class="row room-items">
+            <div class="col-lg-6">
+                <div class="room-box extra-height">
+                    <div class="room-bg" style="background-image: url({{msimg1}});">
+                    </div>
+                    <div class="room-content">
+                        <h3><a routerLink='/shop-detail'>Ariel Ring</a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore magna aliqua.</p>
+                    </div>
+                    <a routerLink='/shop-detail' class="room-link"><i class="fal fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-12 col-md-6">
+                        <div class="room-box">
+                            <div class="room-bg" style="background-image: url({{msimg2}});">
+                            </div>
+                            <div class="room-content">
+                                <h3><a routerLink='/shop-detail'>Agonfly Jewelry</a></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore magna aliqua.</p>
+                            </div>
+                            <a routerLink='/shop-detail' class="room-link"><i class="fal fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-6">
+                        <div class="room-box">
+                            <div class="room-bg" style="background-image: url({{msimg3}});">
+                            </div>
+                            <div class="room-content">
+                                <h3><a routerLink='/shop-detail'>Coin Gold Necklace</a></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore magna aliqua.</p>
+                            </div>
+                            <a routerLink='/shop-detail' class="room-link"><i class="fal fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--====== COUNTER UP END ======-->
+<!--====== TEXT BLOCK START ======-->
+<section class="text-block   with-pattern pt-115 pb-115">
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-lg-6 col-md-10 order-2 order-lg-1">
+                <div class="block-text">
+                    <div class="section-title mb-20">
+                        <span class="title-tag">design video</span>
+                        <h2>Make Your Day Brighter .</h2>
+                    </div>
+                    <p class="pr-50">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat you have to understand
+                        this.
+                    </p>
+                    <a routerLink='/contact' class="main-btn btn-filled mt-40">See More</a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-10 order-1 order-lg-2 wow fadeInRight" data-wow-delay=".3s">
+                <div class="video-wrap video-wrap-two mb-small" style="background-image: url({{videoimg}});">
+                    <a href="http://www.youtube.com/embed/watch?v=EEJFMdfraVY" data-fancybox="gallery" class="popup-video"><i class="fas fa-play"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pattern-wrap">
+        <div class="pattern"></div>
+    </div>
+</section>
+<!--====== TEXT BLOCK END ======-->
+<app-latestpro></app-latestpro>
+<!--====== LATEST NEWS START ======-->
+<section class="pt-115 pb-115 blog-style-2">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-8 col-sm-7">
+                <div class="section-title">
+                    <span class="title-tag">Blog</span>
+                    <h2>News Feeds</h2>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-4 col-sm-5 d-none d-sm-block">
+                <div class="latest-post-arrow arrow-style text-right">
+                    <div class="slick-arrow prev-arrow"><i class="fal fa-arrow-left"></i></div>
+                    <div class="slick-arrow next-arrow"><i class="fal fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </div>
+        <!-- Blog post loop -->
+        <ngx-slick-carousel class="row no-gutters latest-post-slider mt-80" #slickModal="slick-carousel" [config]="latestpostsliderConfig">
+            <div ngxSlickItem class="col-lg-12" *ngFor="let blogpost of blogposts">
+                <article class="blog-post" style="background-image: url({{blogpost.img}});">
+                    <div class="blog-data">
+                        <div class="post-date">
+                            {{blogpost.postdate}}
+                        </div>
+                        <h3 class="post-title"><a href="#">{{blogpost.title}}</a></h3>
+                        <a routerLink='/blog-detail' class="post-link"><span>{{blogpost.linktext}}</span></a>
+                    </div>
+                    <a routerLink='/blog-detail'></a>
+                </article>
+            </div>
+        </ngx-slick-carousel>
+    </div>
+</section>
+<!--====== LATEST NEWS END ======-->
+<app-footer></app-footer>
